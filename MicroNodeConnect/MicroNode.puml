@@ -1,0 +1,101 @@
+@startuml Tahub
+'https://plantuml.com/sequence-diagram
+skinparam backgroundColor #EEEBDC
+skinparam handwritten true
+
+title
+ <u>Connect to MicroNode By MicroNode Connect Protocol</u>
+end title
+actor User
+
+box "MicroNode Connect" #green
+activate "Client"
+end box
+
+box "Nostr Relay" #Grey
+activate "Relay"
+end box
+
+box "MicroNode" #green
+activate "Tahub"
+activate "Tapd"
+activate "lnd"
+end box
+
+Tahub -> Relay : "Boadcast MicroNode info"
+User -> Tahub : "Request MNConnect Url"
+Tahub -> User : "Retrun MNConnect Url"
+User -> Client: "Config MNConnect Url"
+Client -> Relay: "Request MicroNode info"
+Relay -> Client: "Return MicroNode info"
+
+@enduml
+
+
+@startuml Lnd
+skinparam backgroundColor #EEEBDC
+skinparam handwritten true
+
+title
+ <u>How To Make A Lightning Invoice</u>
+end title
+actor User
+
+box "MicroNode Connect" #green
+activate "Client"
+end box
+
+box "Nostr Relay" #Grey
+activate "Relay"
+end box
+
+box "MicroNode" #green
+activate "Tahub"
+activate "Tapd"
+activate "Lnd"
+end box
+
+User -> Client: "Create Lightning Invoice"
+Client -> Relay : "Send Request to MicroNode"
+Relay -> Tahub : "Send Request to MicroNode"
+Tahub -> Lnd : "Request Invoice"
+Lnd -> Tahub : "Return Invoice"
+Tahub -> Relay: "Return Invoice"
+Relay -> Client: "Return Invoice"
+Client -> User: "Show Inovice"
+@enduml
+
+
+
+@startuml Tapd
+skinparam backgroundColor #EEEBDC
+skinparam handwritten true
+
+title
+ <u>How To Generate a Taproot Assets Address</u>
+end title
+actor User
+
+box "MicroNode Connect" #green
+activate "Client"
+end box
+
+box "Nostr Relay" #Grey
+activate "Relay"
+end box
+
+box "MicroNode" #green
+activate "Tahub"
+activate "Tapd"
+activate "Lnd"
+end box
+
+User -> Client: "Create Taproot Assets Address"
+Client -> Relay : "Send Request to MicroNode"
+Relay -> Tahub : "Send Request to MicroNode"
+Tahub -> Tapd : "Request Address"
+Tapd -> Tahub : "Return Address"
+Tahub -> Relay: "Return Address"
+Relay -> Client: "Return Address"
+Client -> User: "Show Address"
+@enduml
