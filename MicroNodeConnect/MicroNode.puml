@@ -24,7 +24,7 @@ end box
 
 Tahub -> Relay : "Boadcast MicroNode info"
 User -> Tahub : "Request MNConnect Url"
-Tahub -> User : "Retrun MNConnect Url"
+Tahub -> User : "Return MNConnect Url"
 User -> Client: "Config MNConnect Url"
 Client -> Relay: "Request MicroNode info"
 Relay -> Client: "Return MicroNode info"
@@ -62,10 +62,8 @@ Tahub -> Lnd : "Request Invoice"
 Lnd -> Tahub : "Return Invoice"
 Tahub -> Relay: "Return Invoice"
 Relay -> Client: "Return Invoice"
-Client -> User: "Show Inovice"
+Client -> User: "Show Invoice"
 @enduml
-
-
 
 @startuml Tapd
 skinparam backgroundColor #EEEBDC

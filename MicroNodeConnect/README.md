@@ -1,14 +1,11 @@
-Access Protocol of MicroNode
-======
-
 MicroNode Connect --> MNConnect
---------------------
+======
 `draft` `optional`
 
 ## Rationale
 MicroNode Connect describes a way for clients to access a remote MicroNode  through a standardized protocol. Custodians may implement this, or the user may run a bridge that bridges their wallet/node and the Nostr Wallet Connect protocol.
 
-MicroNode Connect is built on the Nostr Protocol and is also compatible with the NWC protocol ([Nostr Wallet Connect protocol](https://github.com/nostr-protocol/nips/blob/master/47.md).
+MicroNode Connect is built on the Nostr Protocol and is also compatible with the NWC protocol ([Nostr Wallet Connect protocol](https://github.com/nostr-protocol/nips/blob/master/47.md)).
 
 ## How it works
 ### Connect To MicroNode With MNConnect
