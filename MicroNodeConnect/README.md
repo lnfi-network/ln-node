@@ -25,9 +25,9 @@ MNConnect will support all [Nostr Wallet Connect protocol](https://github.com/no
 #### Events
 ✅ `NIP-47 info event`: 13194
 ✅ `NIP-47 request`: 23194
-✅  `NIP-47 response`: 23195
+✅ `NIP-47 response`: 23195
 
-#### APIs
+#### APIs (Nostr Wallet Connect)
 
 ✅ `get_info`
 
@@ -38,6 +38,12 @@ MNConnect will support all [Nostr Wallet Connect protocol](https://github.com/no
 - ⚠️ PAYMENT_FAILED error code not supported
 
 ✅ `make_invoice`
+
+✅ `list_transactions`
+
+✅ `lookup_invoice`
+
+#### [Nostr Wallet Connect protocol](./APIS.md)
 
 
 ### General Info APIs
