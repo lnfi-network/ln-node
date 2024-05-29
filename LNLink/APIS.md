@@ -1,4 +1,4 @@
-MicroNode Connect --> MNConnect
+LN Node Link --> LNLink
 ======
 `draft` `optional`
 ## API

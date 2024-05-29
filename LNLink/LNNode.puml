@@ -4,11 +4,11 @@ skinparam backgroundColor #EEEBDC
 skinparam handwritten true
 
 title
- <u>Connect to MicroNode By MicroNode Connect Protocol</u>
+ <u>Connect to LN Node By LN Link Protocol</u>
 end title
 actor User
 
-box "MicroNode Connect" #green
+box "LN Link" #green
 activate "Client"
 end box
 
@@ -16,18 +16,18 @@ box "Nostr Relay" #Grey
 activate "Relay"
 end box
 
-box "MicroNode" #green
+box "LN Node" #green
 activate "Tahub"
 activate "Tapd"
 activate "lnd"
 end box
 
-Tahub -> Relay : "Boadcast MicroNode info"
-User -> Tahub : "Request MNConnect Url"
-Tahub -> User : "Return MNConnect Url"
-User -> Client: "Config MNConnect Url"
-Client -> Relay: "Request MicroNode info"
-Relay -> Client: "Return MicroNode info"
+Tahub -> Relay : "Boadcast LN Node info"
+User -> Tahub : "Request LNLink Url"
+Tahub -> User : "Return LNLink Url"
+User -> Client: "Config LNLink Url"
+Client -> Relay: "Request LN Node info"
+Relay -> Client: "Return LN Node info"
 
 @enduml
 
@@ -41,7 +41,7 @@ title
 end title
 actor User
 
-box "MicroNode Connect" #green
+box "LN Link" #green
 activate "Client"
 end box
 
@@ -49,15 +49,15 @@ box "Nostr Relay" #Grey
 activate "Relay"
 end box
 
-box "MicroNode" #green
+box "LN Node" #green
 activate "Tahub"
 activate "Tapd"
 activate "Lnd"
 end box
 
 User -> Client: "Create Lightning Invoice"
-Client -> Relay : "Send Request to MicroNode"
-Relay -> Tahub : "Send Request to MicroNode"
+Client -> Relay : "Send Request to LN Node"
+Relay -> Tahub : "Send Request to LN Node"
 Tahub -> Lnd : "Request Invoice"
 Lnd -> Tahub : "Return Invoice"
 Tahub -> Relay: "Return Invoice"
@@ -74,7 +74,7 @@ title
 end title
 actor User
 
-box "MicroNode Connect" #green
+box "LN Link" #green
 activate "Client"
 end box
 
@@ -82,15 +82,15 @@ box "Nostr Relay" #Grey
 activate "Relay"
 end box
 
-box "MicroNode" #green
+box "LN Node" #green
 activate "Tahub"
 activate "Tapd"
 activate "Lnd"
 end box
 
 User -> Client: "Create Taproot Assets Address"
-Client -> Relay : "Send Request to MicroNode"
-Relay -> Tahub : "Send Request to MicroNode"
+Client -> Relay : "Send Request to LN Node"
+Relay -> Tahub : "Send Request to LN Node"
 Tahub -> Tapd : "Request Address"
 Tapd -> Tahub : "Return Address"
 Tahub -> Relay: "Return Address"

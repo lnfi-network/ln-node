@@ -1,14 +1,14 @@
-MicroNode Connect --> MNConnect
+LN Node Link --> LNLink
 ======
 `draft` `optional`
 
 ## Rationale
-MicroNode Connect describes a way for clients to access a remote MicroNode  through a standardized protocol. Custodians may implement this, or the user may run a bridge that bridges their wallet/node and the Nostr Wallet Connect protocol.
+LN Node Link describes a way for clients to access a remote LN Node  through a standardized protocol. Custodians may implement this, or the user may run a bridge that bridges their wallet/node and the Nostr Wallet Connect protocol.
 
-MicroNode Connect is built on the Nostr Protocol and is also compatible with the NWC protocol ([Nostr Wallet Connect protocol](https://github.com/nostr-protocol/nips/blob/master/47.md)).
+LN Node Link is built on the Nostr Protocol and is also compatible with the NWC protocol ([Nostr Wallet Connect protocol](https://github.com/nostr-protocol/nips/blob/master/47.md)).
 
 ## How it works
-### Connect To MicroNode With MNConnect
+### Connect To LN Node With LNLink
 ![image](./images/Tahub.png)
 
 ### Work With Lnd(Lightning Support)
@@ -20,7 +20,7 @@ MicroNode Connect is built on the Nostr Protocol and is also compatible with the
 ## API
 
 ### NWC APIs 
-MNConnect will support all [Nostr Wallet Connect protocol](https://github.com/nostr-protocol/nips/blob/master/47.md) APIs. Currently, it supports the following APIs:
+LNLink will support all [Nostr Wallet Connect protocol](https://github.com/nostr-protocol/nips/blob/master/47.md) APIs. Currently, it supports the following APIs:
 
 #### Events
 ✅ `NIP-47 info event`: 13194
