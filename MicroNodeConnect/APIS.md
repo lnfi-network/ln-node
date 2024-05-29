@@ -3,53 +3,18 @@ MicroNode Connect --> MNConnect
 `draft` `optional`
 ## API
 
-### General Info APIs
+### APIs For Taproot Assets Channel
+✅ `get_taproot_balance`
+✅ `pay_taproot_invoice`
+✅ `make_taproot_invoice`
 
-#### initOwner
-Request: 
-```jsonc
-{
-    "method": "mn_initOwner",
-    "params": {
-        "name":"",
-        "owner":"npub1234"
-    }
-}
-```
+SignMessage
+VerifyMessage
 
-Response:
-```jsonc
-{
-    "result_type": "mn_initOwner",
-    "result": {
-        "nodeInfo": [
-            
-        ],
-    },
-}
-```
+pay_instant invoice asset_id amount.
 
-#### mn_getinfo
-Request:
-```jsonc
-{
-    "method": "mn_getinfo",
-    "params": {
-    }
-}
-```
-
-Response:
-```jsonc
-{
-    "result_type": "mn_getinfo",
-    "result": {
-        "nodeInfo": [
-            
-        ],
-    },
-}
-```
+sell amount asset_id to asset_id at price 3.434
+buy amount asset_id by asset_id  at price 3242.
 
 ### For Lnd APIs
 Coming Soon
@@ -58,4 +23,15 @@ Coming Soon
 Coming Soon
 
 ### For P2PMarket APIs
-Coming Soon
+
+✅ `sell asset`
+Request: 
+```jsonc
+{
+    "method": "sell_asset",
+    "params": {
+        "name":"",
+        "owner":"npub1234"
+    }
+}
+```
