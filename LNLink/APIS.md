@@ -4,37 +4,69 @@ LN Node Link --> LNLink
 ## API
 
 ### APIs For General
-✅ `SignMessage`
-✅ `VerifyMessage`
+✅ `sign_message`
+- ⚠️ coming soon stay tuned
+- LND API : https://lightning.engineering/api-docs/api/lnd/lightning/sign-message
 
-### APIs For Taproot Assets Channel
-✅ `get_taproot_balance`
-✅ `pay_taproot_invoice`
-✅ `make_taproot_invoice`
-
-✅ pay_instant invoice asset_id amount.
-
-✅ sell amount asset_id to asset_id at price 3.434
-✅ buy amount asset_id by asset_id  at price 3242.
-
-### For Lnd APIs
-Coming Soon
-
-### For TaprootAssets APIs
-Coming Soon
-
-### For P2PMarket APIs
-
-✅ `sell asset`
-Request: 
+Request:
 ```jsonc
 {
-    "method": "sell_asset",
+    "method": "sign_message",
     "params": {
-        "baseAsset":"aabbcc",
-        "quataAsset":"",
-        "type":"limit",
-        "owner":"npub1234"
+        "message":"Lnfi Network"
     }
 }
 ```
+Response:
+```jsonc
+{
+    "result_type": "sign_message",
+    "result": {
+        "signature": "Lnfi Network Signed Hex",
+    },
+}
+```
+✅ `verify_message`
+- ⚠️ coming soon stay tuned
+- LND API : https://lightning.engineering/api-docs/api/lnd/lightning/verify-message
+- Request:
+```jsonc
+{
+    "method": "verify_message",
+    "params": {
+        "message":"Lnfi Network",
+        "signature":"",
+    }
+}
+```
+Response:
+```jsonc
+{
+    "result_type": "verify_message",
+    "result": {
+        "signature": "Lnfi Network Signed Hex",
+    },
+}
+```
+### For TaprootAssets APIs
+✅ `tapd_list_balance`
+- ⚠️ coming soon stay tuned
+
+✅ `tapd_send`
+- ⚠️ coming soon stay tuned
+
+✅ `tapd_new_addrs`
+- ⚠️ coming soon stay tuned
+
+### For P2PMarket APIs
+✅ `market_order_book`
+- ⚠️ coming soon stay tuned
+
+✅ `market_order_list`
+- ⚠️ coming soon stay tuned
+
+✅ `market_order_palce`
+- ⚠️ coming soon stay tuned
+
+✅ `market_order_cancel`
+- ⚠️ coming soon stay tuned
