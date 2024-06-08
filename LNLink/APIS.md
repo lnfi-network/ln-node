@@ -44,7 +44,8 @@ Response:
 {
     "result_type": "verify_message",
     "result": {
-        "signature": "Lnfi Network Signed Hex",
+        "valid": true,
+        "pubkey":"01234"
     },
 }
 ```
