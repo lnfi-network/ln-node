@@ -1,4 +1,4 @@
-@startuml Tahub
+@startuml Link
 'https://plantuml.com/sequence-diagram
 skinparam backgroundColor #EEEBDC
 skinparam handwritten true
@@ -17,15 +17,15 @@ activate "Relay"
 end box
 
 box "LN Node" #green
-activate "Tahub"
+activate "Link"
 activate "Tapd"
 activate "lnd"
 end box
 
-Tahub -> Relay : "Boadcast LN Node info"
-User -> Tahub : "Request LNLink Url"
-Tahub -> User : "Return LNLink Url"
-User -> Client: "Config LNLink Url"
+Link -> Relay : "Boadcast LN Node info"
+User -> Link : "Request Link Url"
+Link -> User : "Return Link Url"
+User -> Client: "Config Link Url"
 Client -> Relay: "Request LN Node info"
 Relay -> Client: "Return LN Node info"
 
@@ -50,17 +50,17 @@ activate "Relay"
 end box
 
 box "LN Node" #green
-activate "Tahub"
+activate "Link"
 activate "Tapd"
 activate "Lnd"
 end box
 
 User -> Client: "Create Lightning Invoice"
 Client -> Relay : "Send Request to LN Node"
-Relay -> Tahub : "Send Request to LN Node"
-Tahub -> Lnd : "Request Invoice"
-Lnd -> Tahub : "Return Invoice"
-Tahub -> Relay: "Return Invoice"
+Relay -> Link : "Send Request to LN Node"
+Link -> Lnd : "Request Invoice"
+Lnd -> Link : "Return Invoice"
+Link -> Relay: "Return Invoice"
 Relay -> Client: "Return Invoice"
 Client -> User: "Show Invoice"
 @enduml
@@ -83,17 +83,17 @@ activate "Relay"
 end box
 
 box "LN Node" #green
-activate "Tahub"
+activate "Link"
 activate "Tapd"
 activate "Lnd"
 end box
 
 User -> Client: "Create Taproot Assets Address"
 Client -> Relay : "Send Request to LN Node"
-Relay -> Tahub : "Send Request to LN Node"
-Tahub -> Tapd : "Request Address"
-Tapd -> Tahub : "Return Address"
-Tahub -> Relay: "Return Address"
+Relay -> Link : "Send Request to LN Node"
+Link -> Tapd : "Request Address"
+Tapd -> Link : "Return Address"
+Link -> Relay: "Return Address"
 Relay -> Client: "Return Address"
 Client -> User: "Show Address"
 @enduml

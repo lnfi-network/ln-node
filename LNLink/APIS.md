@@ -5,7 +5,6 @@ LN Node Link --> LNLink
 
 ### APIs For General
 ✅ `sign_message`
-- ⚠️ coming soon stay tuned
 - LND API : https://lightning.engineering/api-docs/api/lnd/lightning/sign-message
 
 Request:
