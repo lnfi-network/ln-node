@@ -1,10 +1,10 @@
-@startuml LNLink
+@startuml FlashAccount_CreateAccount
 'https://plantuml.com/sequence-diagram
 skinparam backgroundColor #EEEBDC
 skinparam handwritten true
 
 title
- <u>Create Link Falsh Account</u>
+ <u>FlashAccount -> Create Link</u>
 end title
 actor Owner
 
@@ -32,66 +32,13 @@ Relay -> Console: "Return LNLink Url"
 Console -> Owner: "Show LNLink Url"
 @enduml
 
-@startuml UseFlashAccount
+@startuml FlashAccount_PayInvoice
 'https://plantuml.com/sequence-diagram
 skinparam backgroundColor #EEEBDC
 skinparam handwritten true
 
 title
- <u>Use Falsh Account</u>
-end title
-actor User
-
-box "LN Node Client" #green
-activate "Console"
-end box
-
-box "Nostr Relay" #Grey
-activate "Relay"
-end box
-
-box "LN Node Deamon" #green
-activate "Console"
-activate "Link"
-activate "Tapd"
-activate "LND"
-end box
-
-box "LN Node Official" #green
-activate "Backend"
-end box
-
-box "X Platform" #green
-activate "XAPI"
-end box
-
-User -> Console : "Input LNLink Login"
-Console -> Relay : "Request Account Info"
-Relay -> Link:"Send Event to LNNode"
-Link-> Relay: "Response Account Info"
-Relay -> Console: "Push Account Info"
-Console -> User : "Show Account Info"
-User -> Console : "X Auth"
-Console -> Relay : "Request X Auth"
-Relay -> Link:"Send Event to LNNode"
-Link-> Relay: "Send X Auth Info to Official"
-Relay -> Backend: "Push Account Info"
-Backend -> XAPI: "Request X Auth"
-XAPI -> Backend: "Return X Auth"
-Backend -> Relay: "Return X Auth"
-Relay -> Link:"Return X Auth"
-Link-> Relay: "Return X Auth"
-Relay -> Console: "Return X Auth
-Console -> User: "Show X Auth"
-@enduml
-
-@startuml SetPassword
-'https://plantuml.com/sequence-diagram
-skinparam backgroundColor #EEEBDC
-skinparam handwritten true
-
-title
- <u>PayInvocie</u>
+ <u>FlashAccount -> PayInvocie</u>
 end title
 actor User
 
@@ -114,7 +61,7 @@ box "LN Node Official" #Yellow
 activate "Backend"
 end box
 
-box "X Platform" #green
+box "X Platform" #LightBlue
 activate "XAPI"
 end box
 
