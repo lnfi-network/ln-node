@@ -14,7 +14,7 @@ LN Node is a service, empowered by Nostr, designed to simplify the setup and man
 - As LN Nodes develop, they will form an LN Node network based on the Lightning Network. Users can engage in various LightningFi activities, such as Channel Mining, on this network.
 ![image](./images/LNNode_Network.png)
 
-## LN Link Protocol
+## LN Link APIS
 - [Detail](./LNLink/README.md)
 
 More Info : 

@@ -45,4 +45,4 @@ LNLink will support all [Nostr Wallet Connect protocol](https://github.com/nostr
 
 
 ### LN Link APIs (More)
-#### [LN Link protocol](./APIS.md)
+#### [LN Link APIS](./APIS.md)
